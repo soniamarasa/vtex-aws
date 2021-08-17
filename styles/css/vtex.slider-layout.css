@@ -1,0 +1,21 @@
+/* .container {
+}
+
+.slide {
+}
+
+.slideChildrenContainer {
+}
+
+.slideChildrenContainer--carousel {
+} */
+
+.sliderArrows {
+  margin-top: 100px;
+  color:red;
+  bottom: 0;
+}
+
+.imageElement {
+  border-radius: 20px;
+}

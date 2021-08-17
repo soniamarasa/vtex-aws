@@ -1,0 +1,44 @@
+{
+  "store.home": {
+    "blocks": ["flex-layout.row#slider"]
+  },
+
+  "flex-layout.row#slider": {
+    "children": ["list-context.image-list#demo"],
+    "props": {
+      "marginTop": 2,
+      "marginBottom": 8
+    }
+  },
+
+  "list-context.image-list#demo": {
+    "children": ["slider-layout#demo-images"],
+    "props": {
+      "images": [
+        {
+          "image": "assets/BANNER-WOOD.png",
+          "description": "something something",
+          "maxWidth": "90%"
+        },
+        {
+          "image": "assets/BANNER.png",
+          "description": "something something",
+          "maxWidth": "90%"
+        }
+      ],
+      "blockClass": "hello"
+    }
+  },
+  "slider-layout#demo-images": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 1,
+        "tablet": 1,
+        "phone": 1
+      },
+      "infinite": true,
+      "fullWidth": false,
+      "centerMode": "center"
+    }
+  }
+}
