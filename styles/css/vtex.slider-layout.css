@@ -1,21 +1,33 @@
-/* .container {
+.container {
 }
 
 .slide {
 }
 
-.slideChildrenContainer {
+.sliderArrows--banner  {
+  bottom: -3em;
+  width: 40%;
 }
 
-.slideChildrenContainer--carousel {
-} */
+.slideChildrenContainer .carousel .sliderArrows {
+   width: 40%;
+  
+  
+}
 
 .sliderArrows {
-  margin-top: 100px;
-  color:red;
-  bottom: 0;
+ color: #ffffff;
 }
 
 .imageElement {
+  top: 0;
   border-radius: 20px;
+}
+
+.paginationDotsContainer {
+  bottom: -3em;
+}
+
+.categories .slideChildrenContainer  {
+  background-color: brown;
 }

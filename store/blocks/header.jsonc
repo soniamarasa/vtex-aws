@@ -6,15 +6,13 @@
     "blocks": ["header-layout.desktop", "header-layout.mobile"]
   },
   "header-layout.desktop": {
-    "children": [
-      "sticky-layout#desktop"
-    ]
+    "children": ["sticky-layout#desktop"]
   },
   "sticky-layout#desktop": {
     "props": {
       "blockClass": "sticky-header"
     },
-    "children": ["flex-layout.row#desktop", "flex-layout.row#category"]
+    "children": ["flex-layout.row#desktop" ]
   },
   "flex-layout.row#desktop": {
     "props": {
@@ -28,8 +26,7 @@
       "flex-layout.col#logo-desktop",
       "flex-layout.col#spacer",
       "search-bar",
-      "locale-switcher",
-      "login",
+      "flex-layout.col#spacer",
       "minicart.v2"
     ]
   },
@@ -49,7 +46,7 @@
       "title": "Logo",
       "href": "/",
       "url": "assets/upmedal.png",
-      "width": "90"
+      "width": "150"
     }
   },
   "header-layout.mobile": {
@@ -60,10 +57,8 @@
   },
   "flex-layout.row#mobile": {
     "children": [
-      "drawer",
       "logo",
       "flex-layout.col#spacer",
-      "login",
       "minicart.v2"
     ],
     "props": {
@@ -76,8 +71,65 @@
   "drawer": {
     "children": []
   },
-  "flex-layout.row#category" : {
 
+  "link.product#promocoes": {
+    "props": {
+      "label": "PROMOÇÕES",
+      "href": "/promocoes/p"
+    }
+  },
+  "link.product#corinthians": {
+    "props": {
+      "href": "/corinthians/p",
+      "label": "CORINTHIANS"
+    }
+  },
+  "link.product#palmeiras": {
+    "props": {
+      "href": "/palmeiras/p",
+      "label": "PALMEIRAS"
+    }
+  },
+  "link.product#signos": {
+    "props": {
+      "href": "/signos/p",
+      "label": "SIGNOS"
+    }
+  },
+  "link.product#divertidos": {
+    "props": {
+      "href": "/divertidos/p",
+      "label": "DIVERTIDOS"
+    }
+  },
+  "link.product#7maravilhas": {
+    "props": {
+      "href": "/7maravilhas/p",
+      "label": "7 MARAVILHAS"
+    }
+  },
+  "link.product#guerreiros": {
+    "props": {
+      "href": "/guerreiros/p",
+      "label": "GUERREIROS"
+    }
+  },
+  "link.product#album1": {
+    "props": {
+      "href": "/album1/p",
+      "label": "ÁLBUM 1"
+    }
+  },
+  "link.product#album2": {
+    "props": {
+      "href": "/album2/p",
+      "label": "ÁLBUM 2"
+    }
+  },
+  "link.product#album3": {
+    "props": {
+      "href": "/album3/p",
+      "label": "ÁLBUM 3"
+    }
   }
-  
 }
