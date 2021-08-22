@@ -1,18 +1,18 @@
 {
   "store.home": {
-    "blocks": ["tab-layout", "flex-layout.row#slider"]
+    "blocks": [ "flex-layout.row#slider", "list-context.product-list#home"]
   },
 
   "flex-layout.row#slider": {
-    "children": ["list-context.image-list#demo"],
+    "children": ["list-context.image-list#banner"],
     "props": {
       "marginTop": 2,
       "marginBottom": 8
     }
   },
 
-  "list-context.image-list#demo": {
-    "children": ["slider-layout#demo-images"],
+  "list-context.image-list#banner": {
+    "children": ["slider-layout#banner-images"],
     "props": {
       "images": [
         {
@@ -28,7 +28,8 @@
       ]
     }
   },
-  "slider-layout#demo-images": {
+
+  "slider-layout#banner-images": {
     "props": {
       "itemsPerPage": {
         "desktop": 1,
@@ -42,20 +43,6 @@
     }
   },
 
-  "info-card#home": {
-    "props": {
-      "id": "info-card-example",
-      "isFullModeStyle": false,
-      "textPosition": "TOP",
-      "imageUrl": "https://storecomponents.vteximg.com.br/arquivos/banner-infocard2.png",
-      "headline": "Clearance Sale",
-      "callToActionText": "DISCOVER",
-      "callToActionUrl": "/sale/d",
-      "blockClass": "info-card-example",
-      "textAlignment": "center",
-      "fullWidth": "50%"
-    }
-  },
 
   "slider-layout#category": {
     "props": {
@@ -95,8 +82,8 @@
   "tab-list.item#promocao": {
     "props": {
       "tabId": "promocao",
-      "label": "PROMOÇÃO"
-      //,"defaultActiveTab": true
+      "label": "PROMOÇÃO",
+      "defaultActiveTab": true
     }
   },
   "tab-list.item#corinthians": {
@@ -159,156 +146,59 @@
   },
 
   "tab-content.item#promocao": {
-    "children": ["info-card#home"],
+    "children": [],
     "props": {
       "tabId": "promocao"
     }
   },
   "tab-content.item#corinthians": {
-    "children": [
-      "list-context.product-list#corinthians"
-    ],
     "props": {
       "tabId": "corinthians"
     }
   },
 
-  "rich-text#question": {
-    "props": {
-      "text": "**This is an example store built using the VTEX platform.\nWant to know more?**",
-      "blockClass": "question"
-    }
-  },
-
-  "rich-text#link": {
-    "props": {
-      "text": "\n**Reach us at**\nwww.vtex.com.br",
-      "blockClass": "link"
-    }
-  },
-  "slider-layout#produtinhos": {
+  "slider-layout": {
     "props": {
       "itemsPerPage": {
-        "desktop": 2,
+        "desktop": 4,
         "tablet": 1,
         "phone": 1
       },
       "infinite": false,
-      "showPaginationDots": false,
-      "fullWidth": true,
+      "showPaginationDots": true,
+      "fullWidth": false,
       "showNavigationArrows": "desktopOnly",
-     " arrowSize": 10,
+      " arrowSize": 10,
       "blockClass": "produtos"
     },
-    "children": [
-      
-    ]
+    "children": []
   },
-  "list-context.product-list#corinthians": {
-    "blocks": ["product-summary.shelf"],
-    "children": ["slider-layout#produtinhos"],
+
+  "list-context.product-list#home": {
+   "blocks": ["product-summary.shelf#produtos"],
+    "children": ["shelf#produtos"],
     "props": {
       "category": "20",
       "hideUnavailableItems": true,
       "blockClass": "products"
     }
+  },
+
+
+  "shelf#produtos": {
+    "blocks": ["product-summary.shelf#produtos"],
+    "props" : {
+      "itemsPerPage": 4
+    }
+  },
+
+  "product-summary.shelf#produtos": {
+    "children": [
+      "product-summary-name",
+      "product-summary-image#shelf",
+      "product-summary-price",
+      "product-summary-sku-selector",
+      "product-summary-buy-button"
+    ]
   }
-  
-  // "sticky-layout#menu": {
-  //   "props": {
-  //     "blockClass": "sticky-header"
-  //   },
-  //   "children": ["" ]
-  // }
-
-
-  // "product-summary.shelf#my": {
-  //   "children": [
-  //     "stack-layout#prodsum",
-  //     "product-summary-name",
-  //     "flex-layout.col#productRating",
-  //     "product-summary-space",
-  //     "product-list-price#summary",
-  //     "flex-layout.row#selling-price-savings",
-  //     "product-installments#summary",
-  //     "add-to-cart-button"
-  //   ]
-  // },
-  // "flex-layout.col#productRating": {
-  //   "props": {
-  //     "blockClass": "productRating"
-  //   },
-  //   "children": ["product-rating-inline"]
-  // },
-
-  // "stack-layout#prodsum": {
-  //   "children": [
-  //     "product-summary-image#shelf",
-  //     "vtex.product-highlights@2.x:product-highlights#collection"
-  //     // ,"modal-trigger#quickview" // Check quickview.jsonc
-  //   ]
-  // },
-
-  // "product-summary-image#shelf": {
-  //   "props": {
-  //     "showBadge": false,
-  //     "aspectRatio": "1:1",
-  //     "maxHeight": 300
-  //   }
-  // },
-
-  // "vtex.product-highlights@2.x:product-highlights#collection": {
-  //   "props": {
-  //     "type": "collection"
-  //   },
-  //   "children": ["product-highlight-wrapper"]
-  // },
-  // "product-highlight-wrapper": {
-  //   "props": {
-  //     "blockClass": "collection"
-  //   },
-  //   "children": ["product-highlight-text"]
-  // },
-  // "product-highlight-text": {
-  //   "props": {
-  //     "message": "{highlightName}"
-  //   }
-  // },
-
-  // "product-list-price#summary": {
-  //   "props": {
-  //     "blockClass": "summary"
-  //   }
-  // },
-  // "flex-layout.row#selling-price-savings": {
-  //   "props": {
-  //     "colGap": 2,
-  //     "preserveLayoutOnMobile": true,
-  //     "preventHorizontalStretch": true,
-  //     "marginBottom": 4
-  //   },
-  //   "children": [
-  //     "product-selling-price#summary",
-  //     "product-price-savings#summary"
-  //   ]
-  // },
-  // "product-installments#summary": {
-  //   "props": {
-  //     "blockClass": "summary"
-  //   }
-  // },
-  // "product-selling-price#summary": {
-  //   "props": {
-  //     "blockClass": "summary"
-  //   }
-  // },
-  // "product-price-savings#summary": {
-  //   "props": {
-  //     "markers": [
-  //       "discount"
-  //     ],
-  //     "blockClass": "summary"
-  //   }
-  // }
 }
-

@@ -1,0 +1,47 @@
+.element {
+  background-color: #424242;
+}
+
+.productBrand {
+  color: white;
+}
+
+.nameContainer {
+  height: 4em;
+  padding: 0.5em;
+}
+
+.priceContainer {
+  color: #59ff00;
+}
+
+.vtex-store-components-3-x-sellingPrice {
+  color: #59ff00;
+}
+
+
+.selllingPriceContainer:global(.vtex-store-components-3-x-sellingPrice) {
+    color: #59ff00;
+}
+
+.selllingPrice:global(.vtex-store-components-3-x-sellingPrice) {
+    color: #59ff00;
+}
+
+.selllingPriceValue:global(.vtex-store-components-3-x-sellingPrice) {
+    color: #59ff00;
+}
+
+
+.buyButtonContainer :global(.vtex-product-summary-2-x-buyButton) {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}
+
+.container :global(.vtex-button) {
+  background-color: #59ff00;
+  border-color: #59ff00;
+  width: 80%;
+  color: #000;
+}

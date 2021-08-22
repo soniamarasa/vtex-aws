@@ -1,26 +1,131 @@
 {
   "footer": {
-    "blocks": ["footer-layout.desktop", "footer-layout.mobile"]
-  },
-  "footer-layout.desktop": { 
-    "children": [
-      "flex-layout.row#footer"
-    ]
-  },
-  "footer-layout.mobile": { 
-    "children": [
-      "flex-layout.row#footer"
-    ]
-  },
-  "flex-layout.row#footer": { 
-    "children": [
-      "image"
-    ]
-  },
-  "image": {
+    "blocks": ["footer-layout.desktop", "footer-layout.mobile"],
     "props": {
-      "width": 100,
-      "src": "https://brand.vtex.com/static/media/VTEX_pink_RGB.751a9fb5.svg"
+      "blockClass": "classfooter"
+    }
+  },
+  "footer-layout.desktop": {
+    "children": ["sticky-layout#footer"],
+    "props": {
+      "fullWidth": true
+    }
+  },
+  "footer-layout.mobile": {
+    "children": ["sticky-layout#footer"]
+  },
+  "sticky-layout#footer": {
+    "props": {
+      "blockClass": "footer-sticky",
+      "position": "bottom",
+      "verticalSpacing": 0
+    },
+    "children": ["flex-layout.row#footer"]
+  },
+
+  "flex-layout.row#footer": {
+    "children": ["vtex.menu@2.x:menu#footer"],
+    "props": {
+      "horizontalAlign": "center",
+      "verticalAlign": "center",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "fullWidth": true,
+      "blockClass": "footer-content"
+    }
+  },
+
+  "vtex.menu@2.x:menu#footer": {
+    "children": [
+      "menu-item#entrar",
+      "menu-item#desafio",
+      "menu-item#carr",
+      "menu-item#whatsapp"
+    ]
+  },
+  "menu-item#entrar": {
+    "props": {
+      "id": "menu-item-entrar",
+      "type": "custom",
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Client",
+        "text": "ENTRAR"
+      },
+      "iconProps": {
+        "id": "hpa-login",
+        "size": 24,
+        "viewBox": "0 0 24 24",
+        "activeClassName": "rebel-pink",
+        "mutedClassName": "c-action-primary"
+      },
+      "iconToTheRight": true
+    }
+  },
+  "menu-item#desafio": {
+    "props": {
+      "id": "menu-item-desafio",
+      "type": "custom",
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Client",
+        "text": "DESAFIOS"
+      },
+      "iconProps": {
+        "id": "hpa-challenges",
+        "size": 24,
+        "viewBox": "0 0 24 24",
+        "activeClassName": "rebel-pink",
+        "mutedClassName": "c-action-primary"
+      },
+      "iconToTheRight": true
+    }
+  },
+  "menu-item#carr": {
+    "props": {
+      "id": "menu-item-carrinho",
+      "type": "custom",
+      "itemProps": {
+        "type": "internal",
+        "href": "#",
+        "noFollow": false,
+        "tagTitle": "Client",
+        "text": "LOJA"
+      },
+      "iconProps": {
+        "id": "hpa-carts",
+        "size": 24,
+        "viewBox": "0 0 24 24",
+        "activeClassName": "rebel-pink",
+        "mutedClassName": "c-action-primary"
+      },
+      "iconToTheRight": true
+    }
+  },
+
+  "menu-item#whatsapp": {
+    "props": {
+      "id": "menu-item-whatsapp",
+      "type": "custom",
+      "itemProps": {
+        "type": "internal",
+        "href": "https://api.whatsapp.com/send?phone=5521991210517",
+        "noFollow": false,
+        "tagTitle": "Client",
+        "text": "SUPORTE"
+      },
+      "iconProps": {
+        "id": "hpa-carts",
+        "size": 24,
+        "viewBox": "0 0 24 24",
+        "activeClassName": "rebel-pink",
+        "mutedClassName": "c-action-primary"
+      },
+      "iconToTheRight": true
     }
   }
 }

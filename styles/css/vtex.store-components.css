@@ -1,26 +1,43 @@
 .carousel {
-    border-radius: 2em;
+  border-radius: 2em;
 }
 
 .searchBarContainer {
-    width: 770px
+  width: 770px;
 }
 
 .searchBarContainer :global(.vtex-input-prefix__group) {
-    border: none;
-    border-radius:0;
-    border-bottom: 2px solid white;
+  border: none;
+  border-radius: 0;
+  border-bottom: 2px solid white;
 }
 
 .searchBarContainer :global(.vtex-input__suffix) {
-    background: transparent;
-  
+  background: transparent;
 }
 
 .searchBarContainer :global(.vtex-styleguide-9-x-input) {
-    background: transparent;
-    color: #59ff00;
+  background: transparent;
+  color: #59ff00;
 }
 
+.selllingPriceContainer:global(.vtex-store-components-3-x-sellingPrice) {
+  color: #59ff00;
+}
 
+.selllingPrice:global(.vtex-store-components-3-x-sellingPrice) {
+  color: #59ff00;
+}
 
+.selllingPriceValue:global(.vtex-store-components-3-x-sellingPrice) {
+  color: #59ff00;
+}
+
+.listPrice {
+  color: white;
+}
+
+.installmentsPrice,
+.productNameContainer .productBrand {
+  color: white;
+}
